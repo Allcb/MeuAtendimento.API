@@ -4,6 +4,7 @@ using MeuAtendimento.API.Configurations;
 using MeuAtendimento.Domain.Core.Settings;
 using MeuAtendimento.Domain.Core.Types;
 using MeuAtendimento.Infra.CrossCutting.IoC;
+using MeuAtendimento.Services.API.Configurations;
 using MeuAtendmento.Infra.CrossCutting.ExceptionHandler.Providers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -112,6 +113,8 @@ namespace MeuAtendimento.API
                 options.UseApiBehavior = false;
                 options.ErrorResponses = new ApiVersionExceptionHandler();
             });
+
+            services.AddAutoMapperSetup();
 
             services.AddHttpClient();
 
