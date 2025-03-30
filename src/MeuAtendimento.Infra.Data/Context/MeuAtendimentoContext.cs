@@ -1,4 +1,5 @@
 ﻿using MeuAtendimento.Domain.Core.Models;
+using MeuAtendimento.Domain.Models;
 using MeuAtendimento.Infra.Data.Extensions;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -37,10 +38,10 @@ namespace MeuAtendimento.Infra.Data.Context
 
         #region Propriedades Publicas
 
-        //TODO
-        //public DbSet<Paciente> Pacientes { get; set; }
-        //public DbSet<Atendimento> Atendimentos { get; set; }
-        //public DbSet<Triagem> Triagens { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Atendimento> Atendimentos { get; set; }
+        public DbSet<Triagem> Triagens { get; set; }
+        public DbSet<Especialidade> Especialidades { get; set; }
 
         #endregion Propriedades Publicas
 
